@@ -28,7 +28,10 @@ app.use(
     store: new SQLiteStore({ db: 'sessions.db', dir: './data' }),
   })
 );
-app.use(passport.authenticate('session'));
+
+/* Same result but passport.session() more succinctly  */
+// app.use(passport.authenticate('session'));
+app.use(passport.session());
 
 const indexRouter = require('./routes/index');
 const authRouter = require('./routes/auth');

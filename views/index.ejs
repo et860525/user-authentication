@@ -11,7 +11,7 @@
 <body>
 	<h1>Hello</h1>
 	<h2>
-		<%= user.name || user.username || user.email %>
+		Hello <%= user.name || user.username || user.email %>
 	</h2>
 	<form action="/logout" method="post">
 		<button class="logout" type="submit">Sign out</button>
